@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expovit 2025</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/games.css" />
+  
+
+  <!-- Font Awesome -->
+  <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- 🎨 Decoraciones laterales -->
+  <div class="decor decor-left"></div>
+  <div class="decor decor-right"></div>
+
+  <!-- 🧭 Encabezado -->
+  <header class="header container">
+    <a href="/" class="container-logo-responsive">
+      <img src="img/logoExpovit.png" alt="Logo" />
+      <span class="logo-text"></span>
+    </a>
+
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#juegos">Juegos</a></li>
+        <li><a href="ubicacion.html">Ubicación</a></li>
+        <li><a href="#itinerario">Itinerario</a></li>
+        <li><a href="acercaDe.html">Acerca De</a></li>
+      </ul>
+    </nav>
+
+    <ul class="container-sign"></ul>
+
+    <button class="btn-bars" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+
+    <nav class="menu-responsive" aria-hidden="true">
+      <a href="/" class="container-logo">
+        <img src="img/logoExpovit.png" alt="Logo" />
+        <span class="logo-text"></span>
+      </a>
+      <ul>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#juegos">Juegos</a></li>
+        <li><a href="acercaDe.html">Acerca de</a></li>
+        <li><a href="#itinerario">Conferencias</a></li>
+      </ul>
+      <button class="btn-close" aria-label="Cerrar menú">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- 🏠 Banner principal -->
+  <section class="container hero--banner">
+    <div class="content">
+      <span>Fechas</span>
+      <h1>Conoce el itinerario de Expovit 2025</h1>
+      <p>Viernes 14, Sábado 15 y Domingo 16 de Noviembre.</p>
+      <div class="buttons-hero-banner">
+        <a href="#itinerario" class="btn btn-banner-primary">Itinerario</a>
+        <a href="ubicacion.html" class="btn btn-banner-secundary">Lugar</a>
+      </div>
+    </div>
+
+    <div class="container-images-banner">
+      <img src="img/-Vertical Capsule 748px x 896px.png" alt="Imagen Principal" class="main-image" />
+    </div>
+  </section>
+
+  <!-- 📅 Programa del evento -->
+  <section class="schedule container" id="itinerario">
+    <h2 class="schedule-title">Programa del Evento</h2>
+    <p class="schedule-subtitle">Viernes 14, Sábado 15 y Domingo 16 de Noviembre</p>
+
+    <div class="schedule-tabs">
+      <button class="tab active" data-day="friday">Viernes 14</button>
+      <button class="tab" data-day="saturday">Sábado 15</button>
+      <button class="tab" data-day="sunday">Domingo 16</button>
+    </div>
+
+    <div class="schedule-content">
+      <!-- VIERNES -->
+      <div class="day active" id="friday">
+        <div class="event-grid">
+          <div class="event"><span class="hour">10:00 AM</span><span class="title">Apertura</span></div>
+          <div class="event"><span class="hour">11:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">11:45 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">12:30 PM</span><span class="title">Presencia en ferias internacionales - PROCOMER (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">1:45 PM</span><span class="title">Mercados de audiovisuales - PROCOMER (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">2:15 PM</span><span class="title">PROCOMER PITCH TEST (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">3:30 PM</span><span class="title">PROCOMER PITCH TEST (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">4:15 PM</span><span class="title">PROCOMER PITCH TEST (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">5:30 PM</span><span class="title">PROCOMER PITCH TEST (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">6:15 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
+          <div class="event"><span class="hour">7:00 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
+          <div class="event"><span class="hour">8:00 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
+          <div class="event"><span class="hour">9:00 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
+          <div class="event"><span class="hour">10:30 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
+        </div>
+      </div>
+
+      <!-- SÁBADO -->
+      <div class="day" id="saturday">
+        <div class="event-grid">
+          <div class="event"><span class="hour">10:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">11:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">11:45 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">12:30 PM</span><span class="title">Producción Audiovisual - CETAV</span></div>
+          <div class="event"><span class="hour">1:45 PM</span><span class="title">Adaptaciones y universos transmedia - Alfredo Moraga</span></div>
+          <div class="event"><span class="hour">2:15 PM</span><span class="title">Propiedad intelectual - Mandarina Legal</span></div>
+          <div class="event"><span class="hour">3:30 PM</span><span class="title">Animación y videojuegos - Maria Lourdes Cortéz</span></div>
+          <div class="event"><span class="hour">4:15 PM</span><span class="title">Arte digital - Museo de arte y Diseño contemporaneo</span></div>
+          <div class="event"><span class="hour">5:30 PM</span><span class="title">PANEL: SBD Y VIDEOJUEGOS: LA LIBERTAD - AUGE - CELIEM</span></div>
+          <div class="event"><span class="hour">6:15 PM</span><span class="title">Taller del FAUNO: ASODEV - CENTRO DE CINE</span></div>
+          <div class="event"><span class="hour">7:00 PM</span><span class="title">Presentación de trailers de nominados a los VIT AWARDS - Centro de cine/Cine Magaly</span></div>
+          <div class="event"><span class="hour">8:00 PM</span><span class="title">Presentación de trailers de nominados a los VIT AWARDS - Centro de cine/Cine Magaly</span></div>
+          <div class="event"><span class="hour">9:00 PM</span><span class="title">Presentación de trailers de nominados a los VIT AWARDS - Centro de cine/Cine Magaly</span></div>
+          <div class="event"><span class="hour">10:30 PM</span><span class="title">Presentación de trailers de nominados a los VIT AWARDS - Centro de cine/Cine Magaly</span></div>
+        </div>
+      </div>
+
+      <!-- DOMINGO -->
+      <div class="day" id="sunday">
+        <div class="event-grid">
+          <div class="event"><span class="hour">10:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">11:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">11:45 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">12:30 PM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
+          <div class="event"><span class="hour">1:45 PM</span><span class="title">APERTURA</span></div>
+          <div class="event"><span class="hour">2:15 PM</span><span class="title">VIT AWARDS 2025</span></div>
+          <div class="event"><span class="hour">3:30 PM</span><span class="title">VIT AWARDS 2025</span></div>
+          <div class="event"><span class="hour">4:15 PM</span><span class="title">VIT AWARDS 2025</span></div>
+          <div class="event"><span class="hour">5:30 PM</span><span class="title">VIT AWARDS 2025</span></div>
+          <div class="event"><span class="hour">6:15 PM</span><span class="title">VIT AWARDS 2025</span></div>
+          <div class="event"><span class="hour">7:00 PM</span><span class="title">VIT AWARDS 2025</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎮 Galería de Juegos -->
+  <section class="games-section container" id="juegos">
+    <div class="games-header">
+      <span class="games-badge">Videojuegos</span>
+      <h2>Juegos Participantes</h2>
+      <p>Descubre los increíbles juegos que participan en la Expovit 2025</p>
+    </div>
+
+    <div class="games-grid">
+      <!-- Juego 1 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/MixIt.png" alt="MIX IT! RELOADED" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego1')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>MIX IT! RELOADED</h3>
+          <p>T3AMPO STUDIO</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@t3ampostudio857" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/t3ampo/" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.instagram.com/t3ampo/" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/3755720/Mix_it/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 2 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego2.jpeg" alt="Blood Sins" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego2')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>Blood Sins</h3>
+          <p>JGG LOG STUDIO</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@JGGLog" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/jgglog/" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/JGGLog" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/2727040/Blood_Sins/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 3 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego3.jpeg" alt="Chicken with Robot Legs" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego3')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>Chicken with Robot Legs</h3>
+          <p>Gallo Pinto Games</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@gallopintogames/featured" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/gallopintogamescr/" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/GalloPintoGames" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/2866220/Chicken_with_Robot_Legs/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 4 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego4.jpeg" alt="H.A.D.E.S Zero" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego4')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>H.A.D.E.S Zero</h3>
+          <p>Bloodhound Studio</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@DoggoHound" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/bloodhoundstudiocr/" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/DOGGOHOUND" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/3695570/HADES_Zero/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 5 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego5.jpeg" alt="My Last 20" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego5')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>My Last 20</h3>
+          <p>Droidgames Studio</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/c/DroidgamesCo/playlists?app=desktop" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/droidgames_studio/" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/droidgamestd" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/2213990/My_Last_20/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 6 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego6.jpg" alt="Oscuro Blossom's Glow" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego6')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>Oscuro Blossom's Glow</h3>
+          <p>Hongoneon</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@hongoneon" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/hongoneon" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/hongoneon" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/3410490/Oscuro_Blossoms_Glow/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 7 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego7.png" alt="That's Not My Neighbor" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego7')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>That's Not My Neighbor</h3>
+          <p>Nachosama Games</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@_Nacho__" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/nachosamagames" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/3431040/Thats_not_my_Neighbor/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 8 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego8.jpg" alt="Valiants: Arena" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego8')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>Valiants: Arena</h3>
+          <p>Vortrius</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@Vortrius/videos" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/playvaliants/" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/PlayValiants" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/3843120/Valiants_Arena/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 9 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego9.jpg" alt="Ratico Puzzle Adventure" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego9')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>Ratico Puzzle Adventure</h3>
+          <p>Navarro PIM Ltd.</p>
+          <div class="game-links">
+            <a href="#" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/1312480/Ratico_Puzzle_Adventure/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Juego 10 -->
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego10.jpg" alt="Rudolph the Red-Nosed Reindeer" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego10')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>Rudolph the Red-Nosed Reindeer</h3>
+          <p>Headless Chicken Games</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@Headlesschickengames" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/headlesschickengames/?hl=en" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/HeadlessCG" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/3527810/Rudolph_the_RedNosed_Reindeer/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Modal para ver juegos en grande -->
+  <div class="game-modal" id="gameModal">
+    <button class="modal-close" onclick="closeGameModal()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Juego" />
+    </div>
+  </div>
+<!-- 🎥 Sección de Videos -->
+<section class="videos-section container">
+  <div class="videos-header">
+    <span class="videos-badge">Videos</span>
+    <h2>Contenido Destacado</h2>
+    <p>Conoce más sobre la pasada Expovit (2024) </p>
+  </div>
+
+  <div class="videos-grid">
+    <!-- Video 1 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/a9g9Atdu_wo?si=5MIVnIpoqhCJJsif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h3>EXPOVIT 2024: Conferencias internacionales!</h3>
+      </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3bfNOLDk4fU?si=Z0Pcq1q8idtzbp2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h3>EXPOVIT 2024: Panel Industrias Audiovisuales</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="organizers-section-index container">
+  <h2 class="section-title">Organizado por</h2>
+  
+  <!-- Logos de organizadores -->
+<div class="organizers-logos">
+    <div class="organizer-logo-item">
+      <img src="img/Logoasodev.png" alt="ASODEV" />
+    </div>
+    <div class="organizer-logo-item">
+      <img src="img/logo_T3AMPO_Color-14.PNG" alt="Esencial Costa Rica" />
+    </div>
+    <div class="organizer-logo-item">
+      <img src="img/Gentleman logos-19.png" alt="Ministerio de Cultura y Juventud" />
+    </div>
+    <div class="organizer-logo-item">
+      <img src="img/JGGLS_LogoV_RGB-white2.png" alt="Parque La Libertad" />
+    </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo y descripción -->
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="img/logoExpovit.png" alt="Logo Expovit" />
+        </div>
+        <p>Conferencias, talleres, premios y exhibición de videojuegos</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1A7QuXkoUu/?mibextid=wwXIfr" class="social-link" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://x.com/expovitcr" class="social-link" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.youtube.com/@expovit" class="social-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+          <li><a href="index.html#itinerario"><i class="fa-solid fa-chevron-right"></i> Itinerario</a></li>
+          <li><a href="ubicacion.html"><i class="fa-solid fa-chevron-right"></i> Ubicación</a></li>
+          <li><a href="index.html#juegos"><i class="fa-solid fa-chevron-right"></i> Juegos</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Parque La Libertad<br>San José, Costa Rica</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+506 8751-2802</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <span>Lun - Vie: 9:00 AM - 6:00 PM / Solo SMS</span>
+          </li>
+        </ul>
+      </div>
+       
+      <!-- Información -->
+      <div class="footer-section">
+        <h3>Organizado por:</h3>
+        <ul class="footer-links">
+          <li><a href="https://asodev.cr/"><i class="fa-solid fa-chevron-right"></i>ASODEV</a></li>
+          <h3>Invitan:</h3>
+          <li><a href="https://www.esencialcostarica.com/"><i class="fa-solid fa-chevron-right"></i>Esencial Costa Rica</a></li>
+          <li><a href="https://www.mcj.go.cr/"><i class="fa-solid fa-chevron-right"></i>Ministerio de Cultura y juventud</a></li>
+          <li><a href="https://lalibertadcr.org/"><i class="fa-solid fa-chevron-right"></i>La libertad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 <a href="index.html">Expovit</a>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+    <!-- Scripts -->
+  <script src="js/global.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/acercaDe.js"></script>
+  <script src="js/games.js"></script>
+</body>
+</html>

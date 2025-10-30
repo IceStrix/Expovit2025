@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ubicación - Expovit 2025</title>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/ubicacion.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <!-- Font Awesome -->
+  <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- 🎨 Decoraciones laterales -->
+  <div class="decor decor-left"></div>
+  <div class="decor decor-right"></div>
+
+  <!-- 🧭 Encabezado -->
+  <header class="header container">
+    <a href="index.html" class="container-logo-responsive">
+      <img src="img/logoExpovit.png" alt="Logo" />
+      <span class="logo-text"></span>
+    </a>
+
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#juegos">Juegos</a></li>
+        <li><a href="ubicacion.html">Ubicación</a></li>
+        <li><a href="index.html#itinerario">Itinerario</a></li>
+        <li><a href="acercaDe.html">Acerca De</a></li>
+      </ul>
+    </nav>
+
+    <ul class="container-sign"></ul>
+
+    <button class="btn-bars" aria-label="Abrir menú">
+      <i class="fa-solid fa-bars-staggered"></i>
+    </button>
+
+    <nav class="menu-responsive" aria-hidden="true">
+      <a href="index.html" class="container-logo">
+        <img src="img/logoExpovit.png" alt="Logo" />
+        <span class="logo-text"></span>
+      </a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Juegos</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Conferencias</a></li>
+      </ul>
+      <button class="btn-close" aria-label="Cerrar menú">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- 📍 Sección de Ubicación -->
+  <section class="location-section container">
+    <div class="location-header">
+      <span class="location-badge">Ubicación</span>
+      <h1>¡Bienvenido! 
+        ¿Dónde nos encontramos?</h1>
+      <p>Viernes 14, Sábado 15 y Domingo 16 de Noviembre</p>
+    </div>
+
+    <!-- Información de contacto -->
+    <div class="location-info">
+      <div class="info-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Dirección</h3>
+        <p>Auditorio en parque La Libertad<br>Desamparados, Costa Rica</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Horario</h3>
+        <p>Viernes - Domingo<br>10:00 AM - 10:30 PM</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-parking"></i>
+        <h3>Estacionamiento</h3>
+        <p>Disponible<br>Gratis para todos</p>
+      </div>
+    </div>
+
+    <!-- Mapa de Google Maps -->
+    <div class="map-container">
+      <h2>Encuéntranos en el mapa</h2>
+      
+   
+      
+      <div class="map-wrapper">
+        <!-- Reemplaza este iframe con el tuyo -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31441.526706752782!2d-84.10857889911269!3d9.918058546172439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e2344210fce5%3A0x3aff2bcc0b34d035!2sParque%20La%20Libertad!5e0!3m2!1sen!2scr!4v1761718067814!5m2!1sen!2scr" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="map-actions">
+        <a href="https://maps.app.goo.gl/GtwniUv7qdeejnpa9" 
+           target="_blank" 
+           class="btn btn-primary">
+          <i class="fa-solid fa-map-location-dot"></i>
+          Abrir en Google Maps
+        </a>
+        
+        <a href="https://ul.waze.com/ul?venue_id=180879459.1808597981.1191996&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" 
+           target="_blank" 
+           class="btn btn-secondary">
+          <i class="fa-brands fa-waze"></i>
+          Abrir en Waze
+        </a>
+      </div>
+    </div>
+
+    <!-- Información adicional -->
+    <div class="additional-info">
+      <div class="info-box">
+        <h3><i class="fa-solid fa-bus"></i> Transporte Público</h3>
+        <p>Autobuses disponibles desde el centro de San José.</p>
+      </div>
+
+      <div class="info-box">
+        <h3><i class="fa-solid fa-wheelchair"></i> Accesibilidad</h3>
+        <p>Instalaciones completamente accesibles para personas con movilidad reducida.</p>
+      </div>
+
+      <div class="info-box">
+        <h3><i class="fa-solid fa-phone"></i> Contacto</h3>
+        <p>¿Necesitas ayuda? Escríbenos: <strong>+506 8751-2802</strong></p>
+      </div>
+    </div>
+  </section>
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Logo y descripción -->
+      <div class="footer-section">
+        <div class="footer-logo">
+          <img src="img/logoExpovit.png" alt="Logo Expovit" />
+        </div>
+        <p>La feria de videojuegos y tecnología más importante de Costa Rica. Innovación, creatividad y entretenimiento.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Enlaces rápidos -->
+      <div class="footer-section">
+        <h3>Enlaces Rápidos</h3>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+          <li><a href="index.html#itinerario"><i class="fa-solid fa-chevron-right"></i> Itinerario</a></li>
+          <li><a href="ubicacion.html"><i class="fa-solid fa-chevron-right"></i> Ubicación</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Juegos</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Conferencias</a></li>
+        </ul>
+      </div>
+
+      <!-- Información -->
+      <div class="footer-section">
+        <h3>Información</h3>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Acerca de</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Patrocinadores</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> FAQ</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Términos y Condiciones</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <ul class="contact-info">
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Parque La Libertad<br>San José, Costa Rica</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <span>+506 1234-5678</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <span>info@expovit.cr</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-clock"></i>
+            <span>Lun - Vie: 9:00 AM - 6:00 PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 <a href="index.html">Expovit</a>. Todos los derechos reservados. | Hecho con 💜 en Costa Rica</p>
+    </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="js/global.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

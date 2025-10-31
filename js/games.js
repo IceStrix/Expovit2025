@@ -8,16 +8,16 @@ function openGameModal(gameId) {
   
   // Mapeo de IDs a imágenes con extensiones correctas
   const gameImages = {
-    'juego1': 'img/MixIt.png',
-    'juego2': 'img/juego2.jpeg',
-    'juego3': 'img/juego3.jpeg',
-    'juego4': 'img/juego4.jpeg',
-    'juego5': 'img/juego5.jpeg',
-    'juego6': 'img/juego6.jpg',
-    'juego7': 'img/juego7.png',
-    'juego8': 'img/juego8.jpg',
-    'juego9': 'img/juego9.jpg',
-    'juego10': 'img/juego10.jpg'
+    'juego1': 'img/MixIt.webp',
+    'juego2': 'img/juego2.webp',
+    'juego3': 'img/juego3.webp',
+    'juego4': 'img/juego4.webp',
+    'juego5': 'img/juego5.webp',
+    'juego6': 'img/juego6.webp',
+    'juego7': 'img/juego7.webp',
+    'juego8': 'img/juego8.webp',
+    'juego9': 'img/juego9.webp',
+    'juego10': 'img/juego10.webp'
   };
   
   // Establecer la imagen

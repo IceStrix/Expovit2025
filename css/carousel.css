@@ -1,0 +1,294 @@
+.carousel-section {
+  padding: 80px 20px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+
+  border: 2px solid rgba(181, 23, 255, 0.4);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay con gradiente para mejor legibilidad */
+.carousel-slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 0, 26, 0.3) 0%,
+    rgba(10, 0, 26, 0.5) 100%
+  );
+  pointer-events: none;
+}
+
+/* Indicadores de navegación */
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(181, 23, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.carousel-indicator.active {
+  background: #b517ff;
+  box-shadow: 0 0 20px rgba(181, 23, 255, 0.8);
+  transform: scale(1.3);
+}
+
+.carousel-indicator:hover {
+  background: rgba(181, 23, 255, 0.7);
+  transform: scale(1.2);
+}
+
+/* Botones de navegación (opcional) */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(181, 23, 255, 0.3);
+  border: 2px solid rgba(181, 23, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 10;
+  color: white;
+  font-size: 20px;
+}
+
+.carousel-nav:hover {
+  background: rgba(181, 23, 255, 0.6);
+  box-shadow: 0 0 30px rgba(181, 23, 255, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+  left: 20px;
+}
+
+.carousel-nav.next {
+  right: 20px;
+}
+
+/* Efecto de brillo en los bordes */
+.carousel-container::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #b517ff, transparent);
+  animation: borderGlow 3s ease-in-out infinite;
+  z-index: 11;
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Animación de entrada */
+.carousel-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .carousel-wrapper {
+    height: 400px;
+  }
+
+  .carousel-nav {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .carousel-nav.prev {
+    left: 15px;
+  }
+
+  .carousel-nav.next {
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-section {
+    padding: 60px 15px;
+  }
+
+  .carousel-wrapper {
+    height: 300px;
+  }
+
+  .carousel-container {
+    border-radius: 16px;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .carousel-nav.prev {
+    left: 10px;
+  }
+
+  .carousel-nav.next {
+    right: 10px;
+  }
+
+  .carousel-indicators {
+    bottom: 20px;
+    gap: 10px;
+  }
+
+  .carousel-indicator {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-wrapper {
+    height: 250px;
+  }
+
+  /* Ocultar botones de navegación en móviles muy pequeños */
+  .carousel-nav {
+    display: none;
+  }
+}
+.lastExpovit {
+  display: block;
+  text-align: center;
+  font-size: 48px;
+  color: #ffffff;
+  font-family: var(--title-font);
+  text-shadow: 0 0 20px rgba(180, 0, 255, 0.5);
+  line-height: 1.2;
+  font-weight: 700;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajuste para el carousel section - reducir padding superior */
+.carousel-section {
+  padding-top: 20px; /* Reducido desde 80px */
+}
+
+/* Responsive para el título */
+@media (max-width: 768px) {
+  .lastExpovit {
+    font-size: 32px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+  .carousel-section {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lastExpovit {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+}

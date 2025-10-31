@@ -2,7 +2,10 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a001a" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <title>Expovit 2025</title>
 
   <!-- Estilos -->
@@ -11,8 +14,8 @@
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/games.css" />
+  <link rel="stylesheet" href="css/carousel.css" />
   
-
   <!-- Font Awesome -->
   <link 
     rel="stylesheet"
@@ -23,15 +26,10 @@
   />
 </head>
 <body>
-  <!-- 🎨 Decoraciones laterales -->
-  <div class="decor decor-left"></div>
-  <div class="decor decor-right"></div>
-
-  <!-- 🧭 Encabezado -->
+  <!-- Header -->
   <header class="header container">
     <a href="/" class="container-logo-responsive">
-      <img src="img/logoExpovit.png" alt="Logo" />
-      <span class="logo-text"></span>
+      <img src="img/logoExpovit.webp" alt="Logo Expovit" />
     </a>
 
     <nav class="nav-links">
@@ -43,22 +41,19 @@
       </ul>
     </nav>
 
-    <ul class="container-sign"></ul>
-
     <button class="btn-bars" aria-label="Abrir menú">
       <i class="fa-solid fa-bars-staggered"></i>
     </button>
 
     <nav class="menu-responsive" aria-hidden="true">
       <a href="/" class="container-logo">
-        <img src="img/logoExpovit.png" alt="Logo" />
-        <span class="logo-text"></span>
+        <img src="img/logoExpovit.webp" alt="Logo Expovit" />
       </a>
       <ul>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="ubicacion.html">Ubicación</a></li>
         <li><a href="#juegos">Juegos</a></li>
         <li><a href="acercaDe.html">Acerca de</a></li>
-        <li><a href="#itinerario">Conferencias</a></li>
+        <li><a href="#itinerario">Itinerario</a></li>
       </ul>
       <button class="btn-close" aria-label="Cerrar menú">
         <i class="fa-solid fa-xmark"></i>
@@ -66,7 +61,7 @@
     </nav>
   </header>
 
-  <!-- 🏠 Banner principal -->
+  <!-- Hero Banner -->
   <section class="container hero--banner">
     <div class="content">
       <span>Fechas</span>
@@ -79,11 +74,46 @@
     </div>
 
     <div class="container-images-banner">
-      <img src="img/-Vertical Capsule 748px x 896px.png" alt="Imagen Principal" class="main-image" />
+      <img src="img/-Vertical Capsule 748px x 896px.webp" alt="Expovit 2025" class="main-image" />
     </div>
   </section>
 
-  <!-- 📅 Programa del evento -->
+  <!-- Título Carousel -->
+  <h2 class="lastExpovit">¡Imágenes de Expovit 2024!</h2>
+
+  <!-- Carousel -->
+  <section class="carousel-section container">
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        <div class="carousel-track">
+          <div class="carousel-slide active">
+            <img src="img/carousel1.webp" alt="Imagen 1 Expovit" />
+          </div>
+          <div class="carousel-slide">
+            <img src="img/carousel2.webp" alt="Imagen 2 Expovit" />
+          </div>
+          <div class="carousel-slide">
+            <img src="img/carousel3.webp" alt="Imagen 3 Expovit" />
+          </div>
+        </div>
+
+        <button class="carousel-nav prev" aria-label="Anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="carousel-nav next" aria-label="Siguiente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-indicators">
+          <div class="carousel-indicator active" data-slide="0"></div>
+          <div class="carousel-indicator" data-slide="1"></div>
+          <div class="carousel-indicator" data-slide="2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Itinerario -->
   <section class="schedule container" id="itinerario">
     <h2 class="schedule-title">Programa del Evento</h2>
     <p class="schedule-subtitle">Viernes 14, Sábado 15 y Domingo 16 de Noviembre</p>
@@ -95,7 +125,7 @@
     </div>
 
     <div class="schedule-content">
-      <!-- VIERNES -->
+      <!-- Viernes -->
       <div class="day active" id="friday">
         <div class="event-grid">
           <div class="event"><span class="hour">10:00 AM</span><span class="title">Apertura</span></div>
@@ -115,7 +145,7 @@
         </div>
       </div>
 
-      <!-- SÁBADO -->
+      <!-- Sábado -->
       <div class="day" id="saturday">
         <div class="event-grid">
           <div class="event"><span class="hour">10:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
@@ -135,7 +165,7 @@
         </div>
       </div>
 
-      <!-- DOMINGO -->
+      <!-- Domingo -->
       <div class="day" id="sunday">
         <div class="event-grid">
           <div class="event"><span class="hour">10:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
@@ -154,7 +184,7 @@
     </div>
   </section>
 
-  <!-- 🎮 Galería de Juegos -->
+  <!-- Juegos -->
   <section class="games-section container" id="juegos">
     <div class="games-header">
       <span class="games-badge">Videojuegos</span>
@@ -166,7 +196,7 @@
       <!-- Juego 1 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/MixIt.png" alt="MIX IT! RELOADED" />
+          <img src="img/MixIt.webp" alt="MIX IT! RELOADED" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego1')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -183,7 +213,7 @@
             <a href="https://www.instagram.com/t3ampo/" target="_blank" class="game-link instagram" title="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://www.instagram.com/t3ampo/" target="_blank" class="game-link twitter" title="Twitter/X">
+            <a href="https://x.com/t3ampo" target="_blank" class="game-link twitter" title="Twitter/X">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
             <a href="https://store.steampowered.com/app/3755720/Mix_it/" target="_blank" class="game-link download" title="Descargar">
@@ -196,7 +226,7 @@
       <!-- Juego 2 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/juego2.jpeg" alt="Blood Sins" />
+          <img src="img/juego2.webp" alt="Blood Sins" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego2')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -226,7 +256,7 @@
       <!-- Juego 3 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/juego3.jpeg" alt="Chicken with Robot Legs" />
+          <img src="img/juego3.webp" alt="Chicken with Robot Legs" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego3')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -256,7 +286,7 @@
       <!-- Juego 4 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/juego4.jpeg" alt="H.A.D.E.S Zero" />
+          <img src="img/juego4.webp" alt="H.A.D.E.S Zero" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego4')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -286,7 +316,7 @@
       <!-- Juego 5 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/juego5.jpeg" alt="My Last 20" />
+          <img src="img/juego5.webp" alt="My Last 20" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego5')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -316,7 +346,7 @@
       <!-- Juego 6 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/juego6.jpg" alt="Oscuro Blossom's Glow" />
+          <img src="img/juego6.webp" alt="Oscuro Blossom's Glow" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego6')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -346,7 +376,7 @@
       <!-- Juego 7 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/juego7.png" alt="That's Not My Neighbor" />
+          <img src="img/juego7.webp" alt="That's Not My Neighbor" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego7')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -363,9 +393,6 @@
             <a href="https://www.instagram.com/nachosamagames" target="_blank" class="game-link instagram" title="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="#" target="_blank" class="game-link twitter" title="Twitter/X">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
             <a href="https://store.steampowered.com/app/3431040/Thats_not_my_Neighbor/" target="_blank" class="game-link download" title="Descargar">
               <i class="fa-solid fa-download"></i>
             </a>
@@ -376,7 +403,7 @@
       <!-- Juego 8 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/juego8.jpg" alt="Valiants: Arena" />
+          <img src="img/juego8.webp" alt="Valiants: Arena" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego8')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -403,40 +430,10 @@
         </div>
       </div>
 
-      <!-- Juego 9 -->
-      <div class="game-card">
-        <div class="game-image">
-          <img src="img/juego9.jpg" alt="Ratico Puzzle Adventure" />
-          <div class="game-overlay">
-            <button class="btn-view" onclick="openGameModal('juego9')">
-              <i class="fa-solid fa-expand"></i> Ver más
-            </button>
-          </div>
-        </div>
-        <div class="game-info">
-          <h3>Ratico Puzzle Adventure</h3>
-          <p>Navarro PIM Ltd.</p>
-          <div class="game-links">
-            <a href="#" target="_blank" class="game-link youtube" title="YouTube">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="#" target="_blank" class="game-link instagram" title="Instagram">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" target="_blank" class="game-link twitter" title="Twitter/X">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://store.steampowered.com/app/1312480/Ratico_Puzzle_Adventure/" target="_blank" class="game-link download" title="Descargar">
-              <i class="fa-solid fa-download"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
       <!-- Juego 10 -->
       <div class="game-card">
         <div class="game-image">
-          <img src="img/juego10.jpg" alt="Rudolph the Red-Nosed Reindeer" />
+          <img src="img/juego10.webp" alt="Rudolph the Red-Nosed Reindeer" />
           <div class="game-overlay">
             <button class="btn-view" onclick="openGameModal('juego10')">
               <i class="fa-solid fa-expand"></i> Ver más
@@ -465,8 +462,7 @@
     </div>
   </section>
 
-  
-  <!-- Modal para ver juegos en grande -->
+  <!-- Modal Juegos -->
   <div class="game-modal" id="gameModal">
     <button class="modal-close" onclick="closeGameModal()">
       <i class="fa-solid fa-xmark"></i>
@@ -475,63 +471,62 @@
       <img id="modalImage" src="" alt="Juego" />
     </div>
   </div>
-<!-- 🎥 Sección de Videos -->
-<section class="videos-section container">
-  <div class="videos-header">
-    <span class="videos-badge">Videos</span>
-    <h2>Contenido Destacado</h2>
-    <p>Conoce más sobre la pasada Expovit (2024) </p>
-  </div>
 
-  <div class="videos-grid">
-    <!-- Video 1 -->
-    <div class="video-card">
-      <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/a9g9Atdu_wo?si=5MIVnIpoqhCJJsif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <div class="video-info">
-        <h3>EXPOVIT 2024: Conferencias internacionales!</h3>
-      </div>
+  <!-- Videos -->
+  <section class="videos-section container">
+    <div class="videos-header">
+      <span class="videos-badge">Videos</span>
+      <h2>Contenido Destacado</h2>
+      <p>Conoce más sobre la pasada Expovit (2024)</p>
     </div>
 
-    <!-- Video 2 -->
-    <div class="video-card">
-      <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/3bfNOLDk4fU?si=Z0Pcq1q8idtzbp2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="videos-grid">
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/a9g9Atdu_wo?si=5MIVnIpoqhCJJsif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>EXPOVIT 2024: Conferencias internacionales!</h3>
+        </div>
       </div>
-      <div class="video-info">
-        <h3>EXPOVIT 2024: Panel Industrias Audiovisuales</h3>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="organizers-section-index container">
-  <h2 class="section-title">Organizado por</h2>
-  
-  <!-- Logos de organizadores -->
-<div class="organizers-logos">
-    <div class="organizer-logo-item">
-      <img src="img/Logoasodev.png" alt="ASODEV" />
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3bfNOLDk4fU?si=Z0Pcq1q8idtzbp2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-info">
+          <h3>EXPOVIT 2024: Panel Industrias Audiovisuales</h3>
+        </div>
+      </div>
     </div>
-    <div class="organizer-logo-item">
-      <img src="img/logo_T3AMPO_Color-14.PNG" alt="Esencial Costa Rica" />
+  </section>
+
+  <!-- Organizadores -->
+  <section class="organizers-section-index container">
+    <h2 class="section-title">Organizado por</h2>
+    
+    <div class="organizers-logos">
+      <div class="organizer-logo-item">
+        <img src="img/Logoasodev.webp" alt="ASODEV" />
+      </div>
+      <div class="organizer-logo-item">
+        <img src="img/logo_T3AMPO_Color-14.webp" alt="T3AMPO" />
+      </div>
+      <div class="organizer-logo-item">
+        <img src="img/Gentleman logos-19.webp" alt="Gentleman Group Studios" />
+      </div>
+      <div class="organizer-logo-item">
+        <img src="img/JGGLS_LogoV_RGB-white2.webp" alt="JGG LOG Studio" />
+      </div>
     </div>
-    <div class="organizer-logo-item">
-      <img src="img/Gentleman logos-19.png" alt="Ministerio de Cultura y Juventud" />
-    </div>
-    <div class="organizer-logo-item">
-      <img src="img/JGGLS_LogoV_RGB-white2.png" alt="Parque La Libertad" />
-    </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <!-- Logo y descripción -->
       <div class="footer-section">
         <div class="footer-logo">
-          <img src="img/logoExpovit.png" alt="Logo Expovit" />
+          <img src="img/logoExpovit.webp" alt="Logo Expovit" />
         </div>
         <p>Conferencias, talleres, premios y exhibición de videojuegos</p>
         <div class="social-links">
@@ -547,7 +542,6 @@
         </div>
       </div>
 
-      <!-- Enlaces rápidos -->
       <div class="footer-section">
         <h3>Enlaces Rápidos</h3>
         <ul class="footer-links">
@@ -555,10 +549,10 @@
           <li><a href="index.html#itinerario"><i class="fa-solid fa-chevron-right"></i> Itinerario</a></li>
           <li><a href="ubicacion.html"><i class="fa-solid fa-chevron-right"></i> Ubicación</a></li>
           <li><a href="index.html#juegos"><i class="fa-solid fa-chevron-right"></i> Juegos</a></li>
+          <li><a href="acercaDe.html"><i class="fa-solid fa-chevron-right"></i> Acerca De</a></li>
         </ul>
       </div>
 
-      <!-- Contacto -->
       <div class="footer-section">
         <h3>Contacto</h3>
         <ul class="contact-info">
@@ -577,11 +571,13 @@
         </ul>
       </div>
        
-      <!-- Información -->
       <div class="footer-section">
         <h3>Organizado por:</h3>
         <ul class="footer-links">
           <li><a href="https://asodev.cr/"><i class="fa-solid fa-chevron-right"></i>ASODEV</a></li>
+          <li><a href="https://www.t3ampo.com/"><i class="fa-solid fa-chevron-right"></i>T3ampo</a></li>
+          <li><a href="https://www.gentlemangroupstudios.com/"><i class="fa-solid fa-chevron-right"></i>Gentleman Group Studio</a></li>
+          <li><a href="https://www.jgglogstudio.com/"><i class="fa-solid fa-chevron-right"></i>JGG LOG Studio</a></li>
           <h3>Invitan:</h3>
           <li><a href="https://www.esencialcostarica.com/"><i class="fa-solid fa-chevron-right"></i>Esencial Costa Rica</a></li>
           <li><a href="https://www.mcj.go.cr/"><i class="fa-solid fa-chevron-right"></i>Ministerio de Cultura y juventud</a></li>
@@ -590,15 +586,14 @@
       </div>
     </div>
 
-    <!-- Footer bottom -->
     <div class="footer-bottom">
       <p>&copy; 2025 <a href="index.html">Expovit</a>. Todos los derechos reservados.</p>
     </div>
   </footer>
-    <!-- Scripts -->
-  <script src="js/global.js"></script>
+
+  <!-- Scripts -->
   <script src="js/menu.js"></script>
-  <script src="js/acercaDe.js"></script>
   <script src="js/games.js"></script>
+  <script src="js/carousel.js"></script>
 </body>
 </html>

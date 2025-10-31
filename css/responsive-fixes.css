@@ -1,0 +1,63 @@
+/* ===================================
+   CORRECCIONES RESPONSIVE MÍNIMAS
+   Solo arregla problemas específicos
+   Sin tocar colores ni backgrounds
+   =================================== */
+
+/* ORGANIZADORES - Arreglar grid en móvil */
+@media (max-width: 768px) {
+  .organizers-logos {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .organizer-logo-item {
+    height: 100px !important;
+    padding: 15px !important;
+  }
+
+  .organizers-section-index .organizers-logos {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  .organizers-section-index .organizer-logo-item {
+    height: 100px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .organizers-logos {
+    grid-template-columns: 1fr !important;
+  }
+
+  .organizers-section-index .organizers-logos {
+    grid-template-columns: 1fr !important;
+  }
+
+  .organizer-logo-item {
+    max-width: 250px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* MENÚ HAMBURGUESA - Asegurar visibilidad en móvil */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .btn-bars {
+    display: block !important;
+  }
+}
+
+/* NO TOCAR EL BODY - Mantener estilos originales */
+
+/* OCULTAR OVERFLOW CUANDO MENÚ ESTÁ ABIERTO */
+body.noscroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+  position: fixed !important;
+  width: 100% !important;
+}

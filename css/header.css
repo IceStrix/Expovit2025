@@ -5,10 +5,12 @@ header {
   padding: 30px 0;
   gap: 30px;
   position: relative;
-  z-index: 20;
+  z-index: 100; /* Aumentado para estar sobre el difuminado */
 }
 
-.container-logo-responsive, .container-logo {
+/* Logo */
+.container-logo-responsive,
+.container-logo {
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -19,21 +21,34 @@ header {
 .container-logo img {
   width: 175px;
   display: block;
+  filter: drop-shadow(0 0 10px rgba(181, 23, 255, 0.5));
+  transition: transform 0.3s;
+}
+
+.container-logo-responsive img:hover,
+.container-logo img:hover {
+  transform: scale(1.05);
 }
 
 .logo-text {
   color: #fff;
   font-weight: 700;
   font-size: 18px;
-  text-shadow: 0 0 8px rgba(181,23,255,0.8);
+  text-shadow: 0 0 8px rgba(181, 23, 255, 0.8);
 }
+
+/* ===================================
+   NAVEGACIÓN DESKTOP
+   =================================== */
 
 .nav-links ul {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links ul li {
-  list-style: none;
   margin-right: 20px;
 }
 
@@ -41,14 +56,21 @@ header {
   text-decoration: none;
   color: #e8d9ff;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: all 0.3s;
+  padding: 8px 15px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .nav-links ul li a:hover {
   color: #b517ff;
   text-shadow: 0 0 8px rgba(181, 23, 255, 0.8);
+  background: rgba(181, 23, 255, 0.1);
 }
 
+/* ===================================
+   BOTÓN HAMBURGUESA
+   =================================== */
 
 .btn-bars {
   border: none;
@@ -56,41 +78,59 @@ header {
   display: none;
   cursor: pointer;
   z-index: 10001;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.btn-bars:hover {
+  transform: scale(1.1);
 }
 
 .btn-bars i {
-  font-size: 20px;
+  font-size: 24px;
   color: #fff;
+  text-shadow: 0 0 10px rgba(181, 23, 255, 0.8);
 }
 
+/* ===================================
+   MENÚ RESPONSIVE - CORREGIDO
+   =================================== */
 
 .menu-responsive {
   position: fixed;
   top: 0;
-  left: -120%;
-  width: 100%;
+  left: -100%;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(10, 0, 20, 0.98);
+  height: 100dvh; /* Altura dinámica del viewport para móviles */
+  min-height: 100vh;
+  min-height: -webkit-fill-available; /* Para Safari iOS */
+  background: radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 80% 0%, rgba(0, 255, 255, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 50% 80%, rgba(158, 0, 255, 0.25) 0%, transparent 70%),
+              linear-gradient(135deg, #190028 0%, #3c0066 50%, #0a001a 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 40px 20px;
-  transition: left 0.45s cubic-bezier(.2,.9,.3,1);
+  padding: 60px 20px 80px 20px; /* Más padding arriba y abajo */
+  transition: left 0.45s cubic-bezier(0.2, 0.9, 0.3, 1);
   z-index: 9999;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
-
-/* mantiene el contenido por encima del backdrop */
-.menu-responsive > * { z-index: 10000; }
 
 .menu-responsive.active {
   left: 0;
 }
 
-/* Links inside menu */
+.menu-responsive > * {
+  position: relative;
+  z-index: 10000;
+}
+
+/* Links del menú responsive */
 .menu-responsive ul {
   display: flex;
   flex-direction: column;
@@ -98,15 +138,25 @@ header {
   gap: 20px;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
-
-.menu-responsive ul li { list-style: none; }
 
 .menu-responsive ul li a {
   text-decoration: none;
   color: #e8d9ff;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
+  transition: all 0.3s;
+  padding: 12px 30px;
+  border-radius: 10px;
+  display: block;
+}
+
+.menu-responsive ul li a:hover {
+  color: #b517ff;
+  text-shadow: 0 0 10px rgba(181, 23, 255, 0.8);
+  background: rgba(181, 23, 255, 0.1);
+  transform: scale(1.05);
 }
 
 /* Botón cerrar */
@@ -114,10 +164,23 @@ header {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: none;
-  border: none;
+  background: rgba(181, 23, 255, 0.2);
+  border: 2px solid rgba(181, 23, 255, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   z-index: 10001;
+  transition: all 0.3s;
+}
+
+.btn-close:hover {
+  background: rgba(181, 23, 255, 0.4);
+  transform: rotate(90deg);
+  box-shadow: 0 0 20px rgba(181, 23, 255, 0.6);
 }
 
 .btn-close i {
@@ -125,32 +188,71 @@ header {
   color: #fff;
 }
 
-/* mostrar boton hamburguesa en pantallas pequeñas */
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+/* Tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  header {
+    padding: 25px 0;
+  }
+
+  .container-logo-responsive img,
+  .container-logo img {
+    width: 160px;
+  }
+}
+
 @media (max-width: 1024px) {
-  .nav-links { display: none; }
-  .btn-bars { display: block; }
-}
-/* Ocultar la hamburguesa cuando el menú responsive está activo */
-.menu-responsive.active ~ .btn-bars {
-  display: none !important;
-}
-.schedule-content {
-  position: relative;
-  overflow-y: auto;
-  padding: 20px;
+  header {
+    padding: 20px 0;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .btn-bars {
+    display: block !important;
+  }
+
+  .container-logo-responsive img,
+  .container-logo img {
+    width: 140px;
+  }
 }
 
-/* Sombras suaves en los lados para mantener el brillo */
-.schedule-content::before,
-.schedule-content::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 100px;
-  height: 100%;
+/* Ocultar hamburguesa cuando menú está activo */
+.menu-responsive.active ~ header .btn-bars,
+body.noscroll .btn-bars {
+  opacity: 0;
   pointer-events: none;
-  z-index: 2;
 }
 
+@media (max-width: 768px) {
+  header {
+    padding: 15px 0;
+  }
 
+  .container-logo-responsive,
+  .container-logo {
+    margin-top: 10px; /* Reducir margen superior en móvil */
+  }
 
+  .menu-responsive ul li a {
+    font-size: 20px;
+    padding: 10px 25px;
+  }
+
+  .btn-close {
+    width: 45px;
+    height: 45px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .btn-close i {
+    font-size: 22px;
+  }
+}

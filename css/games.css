@@ -14,6 +14,7 @@
   }
 }
 
+/* Header */
 .games-header {
   text-align: center;
   margin-bottom: 60px;
@@ -30,10 +31,22 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(199,125,255,0.8);
+  text-shadow: 0 0 10px rgba(199, 125, 255, 0.8);
   display: inline-block;
   margin-bottom: 15px;
   font-size: 14px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
 }
 
 .games-header h2 {
@@ -52,7 +65,10 @@
   line-height: 1.6;
 }
 
-/* Grid de juegos */
+/* ===================================
+   GRID DE JUEGOS
+   =================================== */
+
 .games-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -60,13 +76,16 @@
   margin-top: 40px;
 }
 
-/* Tarjeta de juego */
+/* ===================================
+   TARJETA DE JUEGO
+   =================================== */
+
 .game-card {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(181, 23, 255, 0.3);
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s;
   box-shadow: 0 0 25px rgba(181, 23, 255, 0.15);
   animation: fadeInScale 0.6s ease-out both;
 }
@@ -88,6 +107,10 @@
 .game-card:nth-child(4) { animation-delay: 0.4s; }
 .game-card:nth-child(5) { animation-delay: 0.5s; }
 .game-card:nth-child(6) { animation-delay: 0.6s; }
+.game-card:nth-child(7) { animation-delay: 0.7s; }
+.game-card:nth-child(8) { animation-delay: 0.8s; }
+.game-card:nth-child(9) { animation-delay: 0.9s; }
+.game-card:nth-child(10) { animation-delay: 1s; }
 
 .game-card:hover {
   transform: translateY(-10px);
@@ -95,7 +118,10 @@
   border-color: rgba(181, 23, 255, 0.6);
 }
 
-/* Imagen del juego */
+/* ===================================
+   IMAGEN DEL JUEGO
+   =================================== */
+
 .game-image {
   position: relative;
   width: 100%;
@@ -119,7 +145,7 @@
   transform: scale(1.1);
 }
 
-/* Overlay con botón */
+/* Overlay */
 .game-overlay {
   position: absolute;
   top: 0;
@@ -138,6 +164,7 @@
   opacity: 1;
 }
 
+/* Botón ver más */
 .btn-view {
   padding: 12px 25px;
   background: linear-gradient(90deg, #9b5de5, #b517ff);
@@ -147,7 +174,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s;
-  box-shadow: 0 0 20px rgba(181,23,255,0.5);
+  box-shadow: 0 0 20px rgba(181, 23, 255, 0.5);
   font-size: 15px;
   display: flex;
   align-items: center;
@@ -159,10 +186,13 @@
 
 .btn-view:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(181,23,255,0.8);
+  box-shadow: 0 0 30px rgba(181, 23, 255, 0.8);
 }
 
-/* Info del juego */
+/* ===================================
+   INFO DEL JUEGO
+   =================================== */
+
 .game-info {
   padding: 25px;
 }
@@ -182,7 +212,10 @@
   font-size: 15px;
 }
 
-/* Links de redes sociales */
+/* ===================================
+   LINKS DE REDES SOCIALES
+   =================================== */
+
 .game-links {
   display: flex;
   gap: 12px;
@@ -260,7 +293,10 @@
   box-shadow: 0 5px 15px rgba(181, 23, 255, 0.6);
 }
 
-/* Modal para ver imágenes en grande */
+/* ===================================
+   MODAL
+   =================================== */
+
 .game-modal {
   position: fixed;
   top: 0;
@@ -332,14 +368,21 @@
   object-fit: contain;
 }
 
-/* Responsive */
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
 @media (max-width: 768px) {
   .games-section {
-    padding: 60px 20px;
+    padding: 60px 15px;
   }
 
   .games-header h2 {
-    font-size: 36px;
+    font-size: 32px;
+  }
+
+  .games-header p {
+    font-size: 16px;
   }
 
   .games-grid {
@@ -348,7 +391,7 @@
   }
 
   .game-image {
-    height: 220px;
+    min-height: 220px;
   }
 
   .modal-close {
@@ -358,26 +401,8 @@
     height: 45px;
     font-size: 20px;
   }
-}
-.games-badge {
-  color: #c77dff;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(199,125,255,0.8);
-  display: inline-block;
-  margin-bottom: 15px;
-  font-size: 14px;
-  animation: pulse 2s ease-in-out infinite;
-}
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.9;
+  .modal-content img {
+    max-height: 70vh;
   }
 }

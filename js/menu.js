@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.tab');
   const days = document.querySelectorAll('.day');
 
-  // Seguridad: si no existen, evitamos errores
+  // Control de tabs (solo si existen)
   if (tabs && tabs.length && days && days.length) {
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
@@ -24,33 +24,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Manejo del menú responsive
   if (!btnBars || !menuResponsive) {
-    // si faltan nodos críticos, no hacemos nada
     return;
   }
 
-btnBars.addEventListener('click', (e) => {
-  e.stopPropagation();
-  const isActive = menuResponsive.classList.toggle('active');
-  menuResponsive.setAttribute('aria-hidden', String(!isActive));
-  document.body.classList.toggle('noscroll', isActive);
-
-  // 🔥 Mostrar solo la X cuando está abierto
-  btnBars.style.display = isActive ? 'none' : 'block';
-});
-
-if (btnClose) {
-  btnClose.addEventListener('click', () => {
-    menuResponsive.classList.remove('active');
-    menuResponsive.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('noscroll');
-    btnBars.style.display = 'block'; // vuelve a aparecer la hamburguesa
+  // Abrir menú
+  btnBars.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menuResponsive.classList.add('active');
+    menuResponsive.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('noscroll');
+    btnBars.style.display = 'none'; // Ocultar hamburguesa
   });
-}
 
+  // Cerrar menú
   if (btnClose) {
     btnClose.addEventListener('click', () => {
       menuResponsive.classList.remove('active');
+      menuResponsive.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('noscroll');
+      btnBars.style.display = 'block'; // Mostrar hamburguesa
     });
   }
 
@@ -58,7 +50,9 @@ if (btnClose) {
   menuResponsive.addEventListener('click', (e) => {
     if (e.target === menuResponsive) {
       menuResponsive.classList.remove('active');
+      menuResponsive.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('noscroll');
+      btnBars.style.display = 'block'; // Mostrar hamburguesa
     }
   });
 
@@ -66,7 +60,20 @@ if (btnClose) {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menuResponsive.classList.contains('active')) {
       menuResponsive.classList.remove('active');
+      menuResponsive.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('noscroll');
+      btnBars.style.display = 'block'; // Mostrar hamburguesa
     }
+  });
+
+  // Cerrar menú al hacer click en un enlace
+  const menuLinks = menuResponsive.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuResponsive.classList.remove('active');
+      menuResponsive.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('noscroll');
+      btnBars.style.display = 'block'; // Mostrar hamburguesa
+    });
   });
 });

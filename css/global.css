@@ -1,52 +1,123 @@
+
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600&display=swap');
 
-:root{
-    --primary-color: #731d88;
-    --text-color: #505050;
-    --text-color-dark: #2c2c2c;
-    --title-font: 'EB Garamond', serif;
-    --text-font: 'Inter', sans-serif;
-    --button-font: 'Montserrat', sans-serif;
+:root {
+  --primary-color: #731d88;
+  --text-color: #505050;
+  --text-color-dark: #2c2c2c;
+  --title-font: 'EB Garamond', serif;
+  --text-font: 'Inter', sans-serif;
+  --button-font: 'Montserrat', sans-serif;
 }
 
-/* Reset */
-* { margin:0; padding:0; box-sizing: border-box; }
-html, body { height: 100%; }
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Body y luces */
+html {
+  height: 100%;
+  background: #0a001a;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+  width: 100%;
+}
+
 body {
-    font-family: var(--text-font);
-    min-height: 100vh;
-    background: radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 60%),
-                radial-gradient(circle at 80% 0%, rgba(0, 255, 255, 0.15) 0%, transparent 60%),
-                radial-gradient(circle at 50% 80%, rgba(158, 0, 255, 0.25) 0%, transparent 70%),
-                linear-gradient(135deg, #190028 0%, #3c0066 50%, #0a001a 100%);
-    background-attachment: fixed;
-    overflow-x: hidden;
-    color: #f5eaff;
-    position: relative;
-    -webkit-font-smoothing: antialiased;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevenir scroll horizontal */
+  width: 100%;
 }
 
-/* luces difusas */
-body::before, body::after {
-    content: "";
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    filter: blur(120px);
-    opacity: 0.6;
-    z-index: -1;
-    animation: float 18s infinite ease-in-out alternate;
+/* Body principal con fondo degradado */
+body {
+  font-family: var(--text-font);
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 80% 0%, rgba(0, 255, 255, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 50% 80%, rgba(158, 0, 255, 0.25) 0%, transparent 70%),
+              linear-gradient(135deg, #190028 0%, #3c0066 50%, #0a001a 100%);
+  background-attachment: fixed;
+  color: #f5eaff;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 !important;
+  padding: 0 !important;
 }
-body::before { background: radial-gradient(circle, rgba(180,0,255,0.6), transparent 70%); top:-150px; left:-100px; }
-body::after  { background: radial-gradient(circle, rgba(255,0,180,0.6), transparent 70%); bottom:-200px; right:-100px; animation-delay:4s; }
 
-@keyframes float { 0%{transform:translateY(0)}50%{transform:translateY(30px)}100%{transform:translateY(-20px)} }
+/* Eliminar cualquier margen por defecto de elementos */
+body > * {
+  margin-left: 0;
+  margin-right: 0;
+}
 
-.container { max-width:1200px; margin:0 auto; padding:0 20px; }
+/* Luces difusas de fondo */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  z-index: -1;
+  animation: float 18s infinite ease-in-out alternate;
+  pointer-events: none;
+}
 
-/* evitar scroll del body cuando se abre el menú */
-.noscroll { overflow: hidden !important; height: 100vh !important; }
+body::before {
+  background: radial-gradient(circle, rgba(180, 0, 255, 0.6), transparent 70%);
+  top: -150px;
+  left: -100px;
+}
+
+body::after {
+  background: radial-gradient(circle, rgba(255, 0, 180, 0.6), transparent 70%);
+  bottom: -200px;
+  right: -100px;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* En pantallas muy pequeñas, reducir el padding */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Bloqueo de scroll cuando menú está abierto */
+.noscroll {
+  overflow: hidden !important;
+  height: 100vh !important;
+  height: 100dvh !important; /* Para móviles modernos */
+  position: fixed !important;
+  width: 100% !important;
+  touch-action: none !important; /* Prevenir scroll táctil */
+}

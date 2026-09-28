@@ -4,11 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Animación de entrada para las cards de eventos
   animateEventCards();
+  
+  // Inicializar carrusel del sábado
+  initSaturdayCarousel();
 });
 
 // Función para crear partículas flotantes decorativas (estrellas)
 function createParticles() {
-  const particleCount = 30; // Más partículas para el index
+  const particleCount = 30;
   const body = document.body;
   
   for (let i = 0; i < particleCount; i++) {
@@ -40,7 +43,6 @@ function createParticles() {
     
     body.appendChild(particle);
     
-    // Crear keyframe único para cada partícula
     const keyframes = `
       @keyframes float-particle-${i} {
         0% {
@@ -60,14 +62,12 @@ function createParticles() {
       }
     `;
     
-    // Agregar keyframe al documento
     const style = document.createElement('style');
     style.textContent = keyframes;
     document.head.appendChild(style);
   }
 }
 
-// Animación de entrada para las cards de eventos
 function animateEventCards() {
   const observerOptions = {
     threshold: 0.1,
@@ -85,7 +85,6 @@ function animateEventCards() {
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
             
-            // Trigger animation
             setTimeout(() => {
               card.style.opacity = '1';
               card.style.transform = 'translateY(0)';
@@ -98,12 +97,10 @@ function animateEventCards() {
     });
   }, observerOptions);
 
-  // Observar las secciones de eventos
   const eventGrids = document.querySelectorAll('.event-grid');
   eventGrids.forEach(grid => observer.observe(grid));
 }
 
-// Efecto de parallax suave en el hero banner
 window.addEventListener('scroll', () => {
   const scrolled = window.pageYOffset;
   const heroBanner = document.querySelector('.hero--banner');
@@ -119,19 +116,15 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Animación de las tabs del itinerario con efecto de brillo
 const tabs = document.querySelectorAll('.tab');
 tabs.forEach(tab => {
   tab.addEventListener('click', function() {
-    // Remover efecto de todas las tabs
     tabs.forEach(t => {
       t.classList.remove('tab-clicked');
     });
     
-    // Agregar efecto a la tab clickeada
     this.classList.add('tab-clicked');
     
-    // Crear efecto de onda
     const ripple = document.createElement('span');
     ripple.classList.add('ripple-effect');
     this.appendChild(ripple);
@@ -140,7 +133,6 @@ tabs.forEach(tab => {
   });
 });
 
-// Agregar efecto de hover mejorado a los botones
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(button => {
   button.addEventListener('mouseenter', function(e) {
@@ -170,7 +162,6 @@ buttons.forEach(button => {
   });
 });
 
-// Agregar keyframes para el efecto ripple
 const rippleStyle = document.createElement('style');
 rippleStyle.textContent = `
   @keyframes ripple-animation {
@@ -218,4 +209,3 @@ rippleStyle.textContent = `
     }
   }
 `;
-document.head.appendChild(rippleStyle);

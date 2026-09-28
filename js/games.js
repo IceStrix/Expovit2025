@@ -17,8 +17,10 @@ function openGameModal(gameId) {
     'juego7': 'img/juego7.webp',
     'juego8': 'img/juego8.webp',
     'juego9': 'img/juego9.webp',
-    'juego10': 'img/juego10.webp'
+    'juego10': 'img/juego10.webp',
+    'juego11': 'img/juego11.webp'
   };
+  
   
   // Establecer la imagen
   modalImage.src = gameImages[gameId];

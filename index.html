@@ -2,21 +2,30 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a001a" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0a001a" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="icon" type="logoExpovit" href="img/logoExpovit.webp">
   <title>Expovit 2025</title>
 
-  <!-- Estilos -->
+
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/games.css" />
-  <link rel="stylesheet" href="css/carousel.css" />
+  <link rel="stylesheet" href="css/responsive-fixes.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/glow-effects.css">
   
-  <!-- Font Awesome -->
+  
+
+
   <link 
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -26,10 +35,15 @@
   />
 </head>
 <body>
-  <!-- Header -->
+
+  <div class="decor decor-left"></div>
+  <div class="decor decor-right"></div>
+
+ 
   <header class="header container">
     <a href="/" class="container-logo-responsive">
-      <img src="img/logoExpovit.webp" alt="Logo Expovit" />
+      <img src="img/logoExpovit.webp" alt="Logo" />
+      <span class="logo-text"></span>
     </a>
 
     <nav class="nav-links">
@@ -38,8 +52,14 @@
         <li><a href="ubicacion.html">Ubicación</a></li>
         <li><a href="#itinerario">Itinerario</a></li>
         <li><a href="acercaDe.html">Acerca De</a></li>
+         <li><a href="eventosVirtuales.html">Viernes</a></li>
+         <li><a href="eventosSabado.html">Sábado</a></li>
+         <li><a href="eventosDomingo.html">Domingo</a></li>
+           <li><a href="eventosVirtuales.html#eventosVirtuales">Virtual</a></li>
       </ul>
     </nav>
+
+    <ul class="container-sign"></ul>
 
     <button class="btn-bars" aria-label="Abrir menú">
       <i class="fa-solid fa-bars-staggered"></i>
@@ -47,13 +67,18 @@
 
     <nav class="menu-responsive" aria-hidden="true">
       <a href="/" class="container-logo">
-        <img src="img/logoExpovit.webp" alt="Logo Expovit" />
+        <img src="img/logoExpovit.webp" alt="Logo" />
+        <span class="logo-text"></span>
       </a>
       <ul>
         <li><a href="ubicacion.html">Ubicación</a></li>
         <li><a href="#juegos">Juegos</a></li>
         <li><a href="acercaDe.html">Acerca de</a></li>
         <li><a href="#itinerario">Itinerario</a></li>
+         <li><a href="eventosVirtuales.html">Viernes</a></li>
+         <li><a href="eventosSabado.html">Sábado</a></li>
+         <li><a href="eventosDomingo.html">Domingo</a></li>
+         <li><a href="eventosVirtuales.html">Eventos Virtuales</a></li>
       </ul>
       <button class="btn-close" aria-label="Cerrar menú">
         <i class="fa-solid fa-xmark"></i>
@@ -61,7 +86,7 @@
     </nav>
   </header>
 
-  <!-- Hero Banner -->
+
   <section class="container hero--banner">
     <div class="content">
       <span>Fechas</span>
@@ -74,117 +99,69 @@
     </div>
 
     <div class="container-images-banner">
-      <img src="img/-Vertical Capsule 748px x 896px.webp" alt="Expovit 2025" class="main-image" />
+      <img src="img/-Vertical Capsule 748px x 896px.webp" alt="Imagen Principal" class="main-image" />
     </div>
   </section>
-
-  <!-- Título Carousel -->
-  <h2 class="lastExpovit">¡Imágenes de Expovit 2024!</h2>
-
-  <!-- Carousel -->
-  <section class="carousel-section container">
-    <div class="carousel-container">
-      <div class="carousel-wrapper">
-        <div class="carousel-track">
-          <div class="carousel-slide active">
-            <img src="img/carousel1.webp" alt="Imagen 1 Expovit" />
-          </div>
-          <div class="carousel-slide">
-            <img src="img/carousel2.webp" alt="Imagen 2 Expovit" />
-          </div>
-          <div class="carousel-slide">
-            <img src="img/carousel3.webp" alt="Imagen 3 Expovit" />
-          </div>
+<span class="lastExpovit">¡Imagenes de Expovit 2024!</span>
+<section class="carousel-section container">
+   
+  <div class="carousel-container">
+    <div class="carousel-wrapper">
+    
+      <div class="carousel-track">
+    
+        <div class="carousel-slide active">
+          <img src="img/carousel1.webp" alt="Imagen 1 Expovit" />
         </div>
-
-        <button class="carousel-nav prev" aria-label="Anterior">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="carousel-nav next" aria-label="Siguiente">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <div class="carousel-indicators">
-          <div class="carousel-indicator active" data-slide="0"></div>
-          <div class="carousel-indicator" data-slide="1"></div>
-          <div class="carousel-indicator" data-slide="2"></div>
+        
+    
+        <div class="carousel-slide">
+          <img src="img/carousel2.webp" alt="Imagen 2 Expovit" />
+        </div>
+        
+      
+        <div class="carousel-slide">
+          <img src="img/carousel3.webp" alt="Imagen 3 Expovit" />
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Itinerario -->
+   
+      <button class="carousel-nav prev" aria-label="Anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="carousel-nav next" aria-label="Siguiente">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+  
+      <div class="carousel-indicators">
+        <div class="carousel-indicator active" data-slide="0"></div>
+        <div class="carousel-indicator" data-slide="1"></div>
+        <div class="carousel-indicator" data-slide="2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <section class="schedule container" id="itinerario">
     <h2 class="schedule-title">Programa del Evento</h2>
     <p class="schedule-subtitle">Viernes 14, Sábado 15 y Domingo 16 de Noviembre</p>
 
     <div class="schedule-tabs">
-      <button class="tab active" data-day="friday">Viernes 14</button>
-      <button class="tab" data-day="saturday">Sábado 15</button>
-      <button class="tab" data-day="sunday">Domingo 16</button>
+      <a href="eventosVirtuales.html" class="tab">Viernes 14</a>
+     <a href="eventosSabado.html" class="tab">Sábado 15</a>
+      <a href="eventosDomingo.html" class="tab">Domingo 15</a>
+      <a href="eventosVirtuales.html#eventosVirtuales" class="tab">Eventos Virtuales</a>
+       
     </div>
 
-    <div class="schedule-content">
-      <!-- Viernes -->
-      <div class="day active" id="friday">
-        <div class="event-grid">
-          <div class="event"><span class="hour">10:00 AM</span><span class="title">Apertura</span></div>
-          <div class="event"><span class="hour">11:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">11:45 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">12:30 PM</span><span class="title">Presencia en ferias internacionales - PROCOMER (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">1:45 PM</span><span class="title">Mercados de audiovisuales - PROCOMER (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">2:15 PM</span><span class="title">PROCOMER PITCH TEST (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">3:30 PM</span><span class="title">PROCOMER PITCH TEST (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">4:15 PM</span><span class="title">PROCOMER PITCH TEST (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">5:30 PM</span><span class="title">PROCOMER PITCH TEST (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">6:15 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
-          <div class="event"><span class="hour">7:00 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
-          <div class="event"><span class="hour">8:00 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
-          <div class="event"><span class="hour">9:00 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
-          <div class="event"><span class="hour">10:30 PM</span><span class="title">MIX IT! - PARTY - T3AMPO/AUGE (Casa emprendedora Maria Teresa Obregon)</span></div>
-        </div>
-      </div>
+   
 
-      <!-- Sábado -->
-      <div class="day" id="saturday">
-        <div class="event-grid">
-          <div class="event"><span class="hour">10:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">11:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">11:45 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">12:30 PM</span><span class="title">Producción Audiovisual - CETAV</span></div>
-          <div class="event"><span class="hour">1:45 PM</span><span class="title">Adaptaciones y universos transmedia - Alfredo Moraga</span></div>
-          <div class="event"><span class="hour">2:15 PM</span><span class="title">Propiedad intelectual - Mandarina Legal</span></div>
-          <div class="event"><span class="hour">3:30 PM</span><span class="title">Animación y videojuegos - Maria Lourdes Cortéz</span></div>
-          <div class="event"><span class="hour">4:15 PM</span><span class="title">Arte digital - Museo de arte y Diseño contemporaneo</span></div>
-          <div class="event"><span class="hour">5:30 PM</span><span class="title">PANEL: SBD Y VIDEOJUEGOS: LA LIBERTAD - AUGE - CELIEM</span></div>
-          <div class="event"><span class="hour">6:15 PM</span><span class="title">Taller del FAUNO: ASODEV - CENTRO DE CINE</span></div>
-          <div class="event"><span class="hour">7:00 PM</span><span class="title">Presentación de trailers de nominados a los VIT AWARDS - Centro de cine/Cine Magaly</span></div>
-          <div class="event"><span class="hour">8:00 PM</span><span class="title">Presentación de trailers de nominados a los VIT AWARDS - Centro de cine/Cine Magaly</span></div>
-          <div class="event"><span class="hour">9:00 PM</span><span class="title">Presentación de trailers de nominados a los VIT AWARDS - Centro de cine/Cine Magaly</span></div>
-          <div class="event"><span class="hour">10:30 PM</span><span class="title">Presentación de trailers de nominados a los VIT AWARDS - Centro de cine/Cine Magaly</span></div>
-        </div>
-      </div>
 
-      <!-- Domingo -->
-      <div class="day" id="sunday">
-        <div class="event-grid">
-          <div class="event"><span class="hour">10:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">11:00 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">11:45 AM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">12:30 PM</span><span class="title">Game Showcase (Auditorio La Libertad)</span></div>
-          <div class="event"><span class="hour">1:45 PM</span><span class="title">APERTURA</span></div>
-          <div class="event"><span class="hour">2:15 PM</span><span class="title">VIT AWARDS 2025</span></div>
-          <div class="event"><span class="hour">3:30 PM</span><span class="title">VIT AWARDS 2025</span></div>
-          <div class="event"><span class="hour">4:15 PM</span><span class="title">VIT AWARDS 2025</span></div>
-          <div class="event"><span class="hour">5:30 PM</span><span class="title">VIT AWARDS 2025</span></div>
-          <div class="event"><span class="hour">6:15 PM</span><span class="title">VIT AWARDS 2025</span></div>
-          <div class="event"><span class="hour">7:00 PM</span><span class="title">VIT AWARDS 2025</span></div>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- Juegos -->
+
   <section class="games-section container" id="juegos">
     <div class="games-header">
       <span class="games-badge">Videojuegos</span>
@@ -193,7 +170,7 @@
     </div>
 
     <div class="games-grid">
-      <!-- Juego 1 -->
+   
       <div class="game-card">
         <div class="game-image">
           <img src="img/MixIt.webp" alt="MIX IT! RELOADED" />
@@ -223,7 +200,7 @@
         </div>
       </div>
 
-      <!-- Juego 2 -->
+      
       <div class="game-card">
         <div class="game-image">
           <img src="img/juego2.webp" alt="Blood Sins" />
@@ -253,7 +230,7 @@
         </div>
       </div>
 
-      <!-- Juego 3 -->
+   
       <div class="game-card">
         <div class="game-image">
           <img src="img/juego3.webp" alt="Chicken with Robot Legs" />
@@ -283,7 +260,7 @@
         </div>
       </div>
 
-      <!-- Juego 4 -->
+      
       <div class="game-card">
         <div class="game-image">
           <img src="img/juego4.webp" alt="H.A.D.E.S Zero" />
@@ -313,7 +290,7 @@
         </div>
       </div>
 
-      <!-- Juego 5 -->
+     
       <div class="game-card">
         <div class="game-image">
           <img src="img/juego5.webp" alt="My Last 20" />
@@ -343,7 +320,7 @@
         </div>
       </div>
 
-      <!-- Juego 6 -->
+     
       <div class="game-card">
         <div class="game-image">
           <img src="img/juego6.webp" alt="Oscuro Blossom's Glow" />
@@ -373,7 +350,7 @@
         </div>
       </div>
 
-      <!-- Juego 7 -->
+    
       <div class="game-card">
         <div class="game-image">
           <img src="img/juego7.webp" alt="That's Not My Neighbor" />
@@ -400,7 +377,7 @@
         </div>
       </div>
 
-      <!-- Juego 8 -->
+    
       <div class="game-card">
         <div class="game-image">
           <img src="img/juego8.webp" alt="Valiants: Arena" />
@@ -429,8 +406,65 @@
           </div>
         </div>
       </div>
+ 
+      <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego9.webp" alt="Ratico Puzzle Adventure" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego9')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+        <div class="game-info">
+          <h3>Ratico Puzzle Adventure</h3>
+          <p>Navarro PIM Ltd.</p>
+          <div class="game-links">
+            <a href="#" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://store.steampowered.com/app/1312480/Ratico_Puzzle_Adventure/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <!-- Juego 10 -->
+   <div class="game-card">
+        <div class="game-image">
+          <img src="img/juego11.webp" alt="Doctor Frentoza" />
+          <div class="game-overlay">
+            <button class="btn-view" onclick="openGameModal('juego11')">
+              <i class="fa-solid fa-expand"></i> Ver más
+            </button>
+          </div>
+        </div>
+ <div class="game-info">
+          <h3>DR. FRENTOZA</h3>
+          <p>Dave XP</p>
+          <div class="game-links">
+            <a href="https://www.youtube.com/@DaveXP" target="_blank" class="game-link youtube" title="YouTube">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/dave.xp/" target="_blank" class="game-link instagram" title="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://x.com/dave_xp_games?lang=en" target="_blank" class="game-link twitter" title="Twitter/X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.davexp.com/" target="_blank" class="game-link download" title="Descargar">
+              <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+     
       <div class="game-card">
         <div class="game-image">
           <img src="img/juego10.webp" alt="Rudolph the Red-Nosed Reindeer" />
@@ -462,7 +496,8 @@
     </div>
   </section>
 
-  <!-- Modal Juegos -->
+  
+
   <div class="game-modal" id="gameModal">
     <button class="modal-close" onclick="closeGameModal()">
       <i class="fa-solid fa-xmark"></i>
@@ -472,58 +507,110 @@
     </div>
   </div>
 
-  <!-- Videos -->
-  <section class="videos-section container">
-    <div class="videos-header">
-      <span class="videos-badge">Videos</span>
-      <h2>Contenido Destacado</h2>
-      <p>Conoce más sobre la pasada Expovit (2024)</p>
-    </div>
+<section class="videos-section container">
+  <div class="videos-header">
+    <span class="videos-badge">Videos</span>
+    <h2>Contenido Destacado</h2>
+    <p>Conoce más sobre la pasada Expovit (2024) </p>
+  </div>
 
-    <div class="videos-grid">
-      <div class="video-card">
-        <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/a9g9Atdu_wo?si=5MIVnIpoqhCJJsif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="video-info">
-          <h3>EXPOVIT 2024: Conferencias internacionales!</h3>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/3bfNOLDk4fU?si=Z0Pcq1q8idtzbp2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="video-info">
-          <h3>EXPOVIT 2024: Panel Industrias Audiovisuales</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Organizadores -->
-  <section class="organizers-section-index container">
-    <h2 class="section-title">Organizado por</h2>
+  <div class="videos-grid">
     
-    <div class="organizers-logos">
-      <div class="organizer-logo-item">
-        <img src="img/Logoasodev.webp" alt="ASODEV" />
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/a9g9Atdu_wo?si=5MIVnIpoqhCJJsif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
-      <div class="organizer-logo-item">
-        <img src="img/logo_T3AMPO_Color-14.webp" alt="T3AMPO" />
-      </div>
-      <div class="organizer-logo-item">
-        <img src="img/Gentleman logos-19.webp" alt="Gentleman Group Studios" />
-      </div>
-      <div class="organizer-logo-item">
-        <img src="img/JGGLS_LogoV_RGB-white2.webp" alt="JGG LOG Studio" />
+      <div class="video-info">
+        <h3>EXPOVIT 2024: Conferencias internacionales!</h3>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
+    
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3bfNOLDk4fU?si=Z0Pcq1q8idtzbp2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h3>EXPOVIT 2024: Panel Industrias Audiovisuales</h3>
+      </div>
+    </div>
+  </div>
+
+    <div class="videos-header">
+
+    <h2>EXPOVIT 2025</h2>
+    <p>Charlas virtuales</p>
+  </div>
+
+  <div class="videos-grid">
+    
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/k9nVryZ6ndc?si=3vcE39hEJE6iVqa1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h3>Charlas virtuales parte 1</h3>
+      </div>
+    </div>
+
+    
+    <div class="video-card">
+      <div class="video-wrapper">
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/44sPI6MG32M?si=E1iQfB1aCe2RiJVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h3>Charlas virtuales parte 2</h3>
+      </div>
+    </div>
+ 
+
+
+  <div class="video-card">
+      <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/UAwphBJn2E0?si=94Ic3Bc4jB5Vtj-R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h3>Charlas presenciales</h3>
+      </div>
+    </div>
+  
+      <div class="video-card">
+      <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XN_a6jyTbrE?si=ewOam7rlHBoc3wfy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="video-info">
+        <h3>Vit Awards 2025</h3>
+      </div>
+    </div>
+ </div>
+
+  
+
+</section>
+
+<section class="organizers-section-index container">
+  <h2 class="section-title">Organizado por</h2>
+  
+
+<div class="organizers-logos">
+    <div class="organizer-logo-item">
+      <img src="img/Logoasodev.webp" alt="ASODEV" />
+    </div>
+    <div class="organizer-logo-item">
+      <img src="img/logo_T3AMPO_Color-14.webp" alt="Esencial Costa Rica" />
+    </div>
+    <div class="organizer-logo-item">
+      <img src="img/Gentleman logos-19.webp" alt="Ministerio de Cultura y Juventud" />
+    </div>
+    <div class="organizer-logo-item">
+      <img src="img/JGGLS_LogoV_RGB-white2.webp" alt="Parque La Libertad" />
+    </div>
+</section>
+
+ 
   <footer class="footer">
     <div class="footer-container">
+      
       <div class="footer-section">
         <div class="footer-logo">
           <img src="img/logoExpovit.webp" alt="Logo Expovit" />
@@ -542,6 +629,7 @@
         </div>
       </div>
 
+    
       <div class="footer-section">
         <h3>Enlaces Rápidos</h3>
         <ul class="footer-links">
@@ -549,10 +637,11 @@
           <li><a href="index.html#itinerario"><i class="fa-solid fa-chevron-right"></i> Itinerario</a></li>
           <li><a href="ubicacion.html"><i class="fa-solid fa-chevron-right"></i> Ubicación</a></li>
           <li><a href="index.html#juegos"><i class="fa-solid fa-chevron-right"></i> Juegos</a></li>
-          <li><a href="acercaDe.html"><i class="fa-solid fa-chevron-right"></i> Acerca De</a></li>
+          <li><a href="acercaDe.html"><i class="fa-solid fa-chevron-right"></i> AcercaDe</a></li>
         </ul>
       </div>
 
+      
       <div class="footer-section">
         <h3>Contacto</h3>
         <ul class="contact-info">
@@ -571,6 +660,7 @@
         </ul>
       </div>
        
+     
       <div class="footer-section">
         <h3>Organizado por:</h3>
         <ul class="footer-links">
@@ -586,14 +676,17 @@
       </div>
     </div>
 
+    
     <div class="footer-bottom">
       <p>&copy; 2025 <a href="index.html">Expovit</a>. Todos los derechos reservados.</p>
     </div>
   </footer>
-
-  <!-- Scripts -->
+    <!-- Scripts -->
+  <script src="js/global.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/acercaDe.js"></script>
   <script src="js/games.js"></script>
   <script src="js/carousel.js"></script>
+  <script src="js/carousel2.js"></script>
 </body>
 </html>
